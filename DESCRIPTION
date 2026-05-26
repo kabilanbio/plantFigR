@@ -1,0 +1,44 @@
+Package: plantFigR
+Type: Package
+Title: Gene Regulatory Network Inference for Plant Single-Cell Multi-omics Data
+Version: 0.99.0
+Authors@R: person("Kabilan", "S", email = "kabilan151414@gmail.com",
+                  role = c("aut", "cre"))
+Description: Contains functions to infer gene regulatory networks from
+    unpaired or paired single-cell RNA-seq and ATAC-seq data for plant species.
+    This package adapts the FigR framework to work with custom BSgenome,
+    EnsDb, and plant‑specific TF motif libraries.
+License: Artistic-2.0
+Encoding: UTF-8
+LazyData: true
+Depends:
+    R (>= 4.3.0)
+Imports:
+    Matrix,
+    SummarizedExperiment,
+    GenomicRanges,
+    dplyr,
+    ggplot2,
+    chromVAR,
+    doParallel,
+    doSNOW,
+    FNN,
+    Rmpfr,
+    Seurat (>= 5.0.0),
+    Signac,
+    BSgenome,
+    motifmatchr,
+    TFBSTools,
+    stats,
+    utils,
+    methods,
+    parallel,
+    foreach,
+    pbmcapply,
+    reshape2,
+    matrixStats
+Suggests:
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Config/roxygen2/version: 8.0.0
