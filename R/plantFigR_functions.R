@@ -141,8 +141,6 @@ runGenePeakcorr_plant <- function(
   chunkEnds <- chunkStarts + largeChunkSize - 1
   chunkEnds[length(chunkEnds)] <- numPairs
 
-  library(doParallel)
-
   dorcList <- list()
   for (i in seq_along(chunkStarts)) {
     cat("Running pairs: ", chunkStarts[i], " to ", chunkEnds[i], "\n")
@@ -315,7 +313,6 @@ runFigRGRN_plant <- function(
 
   cat("Testing ", length(motifsToKeep), " TFs\n")
   cat("Testing ", nrow(dorcMat), " DORCs\n")
-  library(doParallel)
   if (nCores > 1)
     message("Running FigR using ", nCores, " cores ..\n")
 
