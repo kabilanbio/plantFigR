@@ -63,7 +63,6 @@ plotPairs <- function(ATAC,
   d <- rbind(d1,d2)
 
 
-  require(ggrastr)
   ggplot(umap.df, aes(x = UMAP1, y = UMAP2)) +
     geom_point_rast(color="gray95",size=1.5)+
     geom_point(data=d,aes(UMAP1,UMAP2,color=Group),alpha=0.8,size=pairPointSize) +
@@ -156,7 +155,6 @@ umap_knn_graph <-function(x, #Input data on which we compute the knn graph
                           k = 5,
                           seed){# Number of neighbors for computing the KNN graph{
 
-  library(uwot)
 
   # UMAP embedding of data
   set.seed(seed)
@@ -286,11 +284,6 @@ cell_pairing <- function(ATACpcs, # Input ATAC single cell PCs obtained from Run
                          seed=123 # Random seed for subgraph UMAP and for down-sampling if subgraphs are imbalanced
 
 ){
-
-  library(igraph)
-  library(FNN)
-  library(pracma)
-  library(uwot)
 
   # For now we pool ATAC cells and RNA cells to delineate a manifold
   all_pcs <- rbind(ATACpcs, RNApcs)

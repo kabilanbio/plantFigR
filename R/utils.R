@@ -430,7 +430,6 @@ plotMarker2D <- function(df, # data frame of tSNE or UMAP coordinates for single
     }
 
     if(rasteRize){
-      require(ggrastr)
       pointfun <- geom_point_rast
     } else {
       pointfun <- geom_point

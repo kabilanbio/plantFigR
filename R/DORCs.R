@@ -275,7 +275,6 @@ runGenePeakcorr <- function(ATAC.se, # SummarizedExperiment object of scATAC dat
   chunkEnds <- chunkStarts + largeChunkSize -1
   chunkEnds[length(chunkEnds)] <- numPairs
 
-  library(doParallel)
 
   dorcList <- list()
   for(i in 1:length(chunkStarts)){
