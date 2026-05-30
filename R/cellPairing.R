@@ -376,7 +376,7 @@ cell_pairing <- function(ATACpcs, # Input ATAC single cell PCs obtained from Run
       }
 
       # We also calculate euclidean distance matrix
-      subgraph_eucdist <- distmat(subgraph_ATAC_pcs, subgraph_RNA_pcs)
+      subgraph_eucdist <- pracma::distmat(subgraph_ATAC_pcs, subgraph_RNA_pcs)
 
       # Find KNN based on geodesic distances.
       print("Constructing KNN based on geodesic distance to reduce search pairing search space")

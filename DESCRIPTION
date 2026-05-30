@@ -36,7 +36,8 @@ Imports:
     foreach,
     pbmcapply,
     reshape2,
-    matrixStats
+    matrixStats,
+    pracma
 Suggests:
     knitr,
     rmarkdown
