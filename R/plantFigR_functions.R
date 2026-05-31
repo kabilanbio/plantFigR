@@ -118,6 +118,10 @@ runGenePeakcorr_plant <- function(
     ATAC.se <- chromVAR::addGCBias(ATAC.se, genome = bsgenome)
   }
 
+  row.data <- data.frame(rowData(ATAC.se))
+  row.data[is.na(row.data)] <- 0
+  rowData(ATAC.se) <- row.data
+
   # Background peaks
   set.seed(123)
   cat("Determining background peaks ..\n")
