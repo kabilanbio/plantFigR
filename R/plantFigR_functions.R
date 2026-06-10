@@ -354,7 +354,7 @@ runFigRGRN_plant <- function(
 
     corr.r <- cor(dorcMat[g, ], t(as.matrix(rnaMat[mZ$Motif, ])),
                   method = "spearman")
-    stopifnot(all.equal(colnames(corr.r), mZ$Motif))
+    stopifnot(all.equal(colnames(corr.r), as.character(mZ$Motif)))
 
     mZ$Corr <- corr.r[1, ]
     mZ$Corr.Z <- scale(mZ$Corr, center = TRUE, scale = TRUE)[, 1]
